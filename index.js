@@ -14,8 +14,14 @@ function hexToRgb(hex)
         } : null;
     }
   
-if (process.argv[2] === "hex"){
+function rgbToHex(r, g, b) {
+        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+      }
+
+ if (process.argv[2] === "hex"){
     console.log(hexToRgb(process.argv[3]))
 }
 
-//   alert(hexToRgb("#0033ff").g); // "51";
+else if (process.argv[2] === "rgb"){
+    console.log(rgbToHex(parseInt(process.argv[3]),parseInt(process.argv[4]),parseInt(process.argv[5])))
+}
